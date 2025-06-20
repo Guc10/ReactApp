@@ -1,7 +1,7 @@
 //import Header from "./components/Header";
 import Heading from "./components/Heading";
 import MovingButton from "./components/MovingButton";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   /*
@@ -43,7 +43,7 @@ function App() {
             <MovingButton />
           </>
         ) : (
-          <h1>YAYY !!!</h1>
+          <h1>YAYY &lt;3 !!!</h1>
         )}
       </main>
     </>
