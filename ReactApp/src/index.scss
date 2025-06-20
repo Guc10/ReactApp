@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto;
+  font-family: "Gill Sans";
+  color: aqua;
+}
+
+.list-group-element {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: rgb(88, 88, 209);
+  color: white;
+}
