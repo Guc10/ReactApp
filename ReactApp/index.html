@@ -3,9 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tester-online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      function deployParticles() {
+        const defaults = {
+          spread: 360,
+          ticks: 100,
+          gravity: 0,
+          decay: 0.94,
+          startVelocity: 30,
+          shapes: ["heart"],
+          colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+        };
+
+        confetti({
+          ...defaults,
+          particleCount: 50,
+          scalar: 2,
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 25,
+          scalar: 3,
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 10,
+          scalar: 4,
+        });
+      }
+    </script>
   </body>
 </html>

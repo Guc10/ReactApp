@@ -1,9 +1,12 @@
 body {
   margin: 0 auto;
-  font-family: "Gill Sans";
-  color: aqua;
+  font-family: "Roboto";
+  color: rgb(55, 7, 55);
+  background-color: rgb(255, 30, 255);
+  overflow: hidden;
 }
 
+/*
 .list-group-element {
   width: 200px;
   padding: 10px;
@@ -14,4 +17,34 @@ body {
 .active {
   background-color: rgb(88, 88, 209);
   color: white;
+}
+*/
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 300%;
+    margin: 50px;
+  }
+}
+
+button {
+  background-color: violet;
+  font-size: 150%;
+  width: 200px;
+  height: 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 5px 5px 1px 2px rgb(46, 25, 46);
+
+  &:hover {
+    background-color: rgb(255, 215, 141);
+    box-shadow: 5px 5px 1px 1px rgb(202, 154, 65);
+  }
 }

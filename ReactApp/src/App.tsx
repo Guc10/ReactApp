@@ -1,6 +1,10 @@
-import Header from "./components/Header";
+//import Header from "./components/Header";
+import Heading from "./components/Heading";
+import MovingButton from "./components/MovingButton";
+import React, { useState } from "react";
 
 function App() {
+  /*
   const TestList = [
     "test1",
     "test2",
@@ -15,14 +19,34 @@ function App() {
     console.log(item);
   };
 
+  <Header items={TestList} heading="Numbers" onSelectItem={handleSelectItem} />;
+  */
+
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+    // @ts-ignore
+    if (typeof window.deployParticles === "function") {
+      // @ts-ignore
+      window.deployParticles();
+    }
+  };
+
   return (
-    <div>
-      <Header
-        items={TestList}
-        heading="Numbers"
-        onSelectItem={handleSelectItem}
-      />
-    </div>
+    <>
+      <main>
+        {!clicked ? (
+          <>
+            <Heading />
+            <button onClick={handleClick}>YESSS !!!</button>
+            <MovingButton />
+          </>
+        ) : (
+          <h1>YAYY !!!</h1>
+        )}
+      </main>
+    </>
   );
 }
 
