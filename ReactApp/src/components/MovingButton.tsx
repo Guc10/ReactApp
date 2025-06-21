@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function MovingButton() {
   const getRandomPosition = () => ({
+    transition: "top 0.3s, left 0.3s",
     position: "absolute",
     top: Math.floor(Math.random() * 75) + "vh",
     left: Math.floor(Math.random() * 75) + "vw",
@@ -19,7 +20,6 @@ function MovingButton() {
       onClick={handleClick}
       style={{
         ...style,
-        transition: "top 0.3s, left 0.3s",
       }}
     >
       nooo …

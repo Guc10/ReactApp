@@ -1,27 +1,9 @@
-//import Header from "./components/Header";
-import Heading from "./components/Heading";
+import Header from "./components/Header";
 import MovingButton from "./components/MovingButton";
+import Logo from "./components/Logo";
 import { useState } from "react";
 
 function App() {
-  /*
-  const TestList = [
-    "test1",
-    "test2",
-    "test3",
-    "test4",
-    "test5",
-    "test6",
-    "test7",
-  ];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
-  <Header items={TestList} heading="Numbers" onSelectItem={handleSelectItem} />;
-  */
-
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -38,13 +20,14 @@ function App() {
       <main>
         {!clicked ? (
           <>
-            <Heading />
+            <Header />
             <button onClick={handleClick}>YESSS !!!</button>
             <MovingButton />
           </>
         ) : (
           <h1>YAYY &lt;3 !!!</h1>
         )}
+        <Logo />
       </main>
     </>
   );
